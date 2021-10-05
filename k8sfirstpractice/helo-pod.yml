@@ -9,9 +9,17 @@ spec:
   containers:
     - name: web
       image: httpd
+      resources:
+        limits:
+          memory: "512M"
+          cpu: "1"
+        requests:
+          memory: "64M"
+          cpu: "0.5"   
       ports:
         - name: web
           containerPort: 80
           protocol: TCP
+
 
     
